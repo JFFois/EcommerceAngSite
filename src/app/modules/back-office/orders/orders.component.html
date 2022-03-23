@@ -1,0 +1,102 @@
+
+
+<div class="cs-back-office-orders-wrapper">
+
+    <p-table #dt [value]="orders" [(selection)]="selectedOrders" dataKey="id" styleClass="p-datatable-orders" [rowHover]="true"
+    [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" 
+    [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
+    <ng-template pTemplate="caption">
+        <div class="table-header">
+            {{ pretrad + 'SEARCH.LIST' | translate }}
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" [placeholder]="pretrad + 'SEARCH.GLOBAL' | translate" />
+            </span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 3rem"></th>
+            <th pSortableColumn="id">{{ pretrad + 'COL.NUMCOMMANDE' | translate }}<p-sortIcon field="id"></p-sortIcon></th>
+            <th pSortableColumn="name">{{ pretrad + 'COL.NAME' | translate }} <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="nbArticles">{{ pretrad + 'COL.NBART' | translate }} <p-sortIcon field="nbArticles"></p-sortIcon></th>
+            <th pSortableColumn="montantHT">{{ pretrad + 'COL.MONTANTHT' | translate }}<p-sortIcon field="montantHT"></p-sortIcon></th>
+            <th pSortableColumn="montantTTC">{{ pretrad + 'COL.MONTANTTTC' | translate }}<p-sortIcon field="montantTTC"></p-sortIcon></th>
+            <th pSortableColumn="modePaiement">{{ pretrad + 'COL.MODEPAIEMENT' | translate }}<p-sortIcon field="modePaiement"></p-sortIcon></th>
+            <th pSortableColumn="date">{{ pretrad + 'COL.DATE' | translate }} <p-sortIcon field="date"></p-sortIcon></th>
+            <th pSortableColumn="status">{{ pretrad + 'COL.STATUS' | translate }} <p-sortIcon field="status"></p-sortIcon></th>
+            <th style="width: 8rem"></th>
+        </tr>
+        <!-- Recherche -->
+        <!-- <tr>
+            <th>
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>
+                <input pInputText type="text" (input)="dt.filter($event.target.value, 'name', 'startsWith')" placeholder="Search by Name" class="p-column-filter">
+            </th>
+            <th>
+                <input pInputText type="text" (input)="dt.filter($event.target.value, 'country.name', 'contains')" placeholder="Search by Country" class="p-column-filter">
+            </th>
+            <th>
+            <th>
+
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                <input pInputText type="text" (input)="onActivityChange($event)" placeholder="Minimum" class="p-column-filter" >
+            </th>
+            <th></th>
+        </tr> -->
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+        <tr class="p-selectable-row">
+            <td style="width: 3rem"></td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.NUMCOMMANDE' | translate }}</span>
+                {{order.id}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.NAME' | translate }}</span>
+                {{order.name}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.NBART' | translate }}</span>
+                {{order.nbArticles}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.MONTANTHT' | translate }}</span>
+                {{order.montantHT}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.MONTANTTTC' | translate }}</span>
+                {{order.montantTTC}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.MODEPAIEMENT' | translate }}</span>
+                {{order.modePaiement}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.DATE' | translate }}</span>
+                {{order.date}}
+            </td>
+            <td>
+                <span class="p-column-title">{{ pretrad + 'COL.STATUS' | translate }}</span>
+                <span [class]="'order-badge status-' + order.status">{{order.status}}</span>
+            </td>
+            <td style="text-align: center">
+                <button pButton type="button" class="p-button-secondary" icon="pi pi-cog"></button>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="8">No orders found.</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+</div>

@@ -1,0 +1,110 @@
+Description:
+  frontend env cloudformation
+
+Parameters:
+
+  EnvironmentName:
+    Description: environment name
+    Type: String
+
+  Project:
+    Description: project name
+    Type: String
+
+  DNSRecord:
+    Description: Domain name
+    Type: String
+  
+  DNSZone:
+    Description: DNS Zone to use
+    Type: String
+
+  CertificateArn:
+    Description: Certificate to use
+    Type: String
+
+Resources:
+  FrontBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl:  Private
+      BucketName: !Sub adneom-${EnvironmentName}
+
+  FrontBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref FrontBucket
+      PolicyDocument:
+        Statement:
+          - Sid: "AllowCloudFront"
+            Effect: "Allow"
+            Principal:
+              CanonicalUser: !GetAtt [CloudFrontOriginAccessIdentity, S3CanonicalUserId]
+            Action: "s3:GetObject"
+            Resource:
+              !Sub ${FrontBucket.Arn}/*
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Ref DNSRecord
+        DefaultCacheBehavior:
+          Compress: true
+          ForwardedValues:
+            QueryString: false
+          TargetOriginId: !Ref DNSRecord
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        CustomErrorResponses:
+          - ErrorCachingMinTTL: 300
+            ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+          - ErrorCachingMinTTL: 300
+            ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+        Enabled: true
+        HttpVersion: http2
+        Origins:
+          - DomainName:
+              !Join [ "", [ !Ref FrontBucket, ".s3.amazonaws.com" ] ]
+            Id: !Ref DNSRecord
+            S3OriginConfig:
+              OriginAccessIdentity:
+                !Join [ "", [ "origin-access-identity/cloudfront/", !Ref CloudFrontOriginAccessIdentity ] ]
+        PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: !Ref CertificateArn
+          MinimumProtocolVersion: TLSv1
+          SslSupportMethod: sni-only
+      Tags:
+        - Key: Domain
+          Value: !Ref DNSRecord
+        - Key: Type
+          Value: projet
+        - Key: Projet
+          Value: !Ref Project
+
+  CloudFrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub 'CloudFront OAI for ${DNSRecord}'
+
+  DNSRecordSet:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref DNSZone
+      Name: !Ref DNSRecord
+      Type: CNAME
+      TTL: '600'
+      ResourceRecords:
+      - !GetAtt [CloudFrontDistribution, DomainName]
+
+Outputs:
+  Bucket:
+    Description: Deployed bucket
+    Value: !Sub adneom-${EnvironmentName}

@@ -1,0 +1,399 @@
+{
+    "MODULES": {
+        "USER": {
+            "LOGIN": {
+                "FORM": {
+                    "MAIL": {
+                        "LABEL": "Adresse e-mail"
+                    },
+                    "PASSWORD": {
+                        "LABEL": "Mot de passe"
+                    },
+                    "ACTIONS": {
+                        "FORGOTTEN-PASSWORD": "Mot de passe oublié ?",
+                        "SIGN-IN": "Se connecter"
+                    }
+                },
+                "ACTIONS": {
+                    "REGISTER": "Créer un compte"
+                }
+            }
+        },
+        "LANDING-PAGE": {
+            "PRODUCT": {
+                "AVAILABILITY": {
+                    "AVAILABLE-UNDER": "Disponible sous",
+                    "DAYS": "jours"
+                },
+                "ACTIONS": {
+                    "ENGRAVING": "Gravure personnalisée <b>offerte</b>",
+                    "ADD-TO-BASKET": "AJOUTER AU PANIER"
+                },
+                "TABVIEW": {
+                    "PRESENTATION": "PRESENTATION",
+                    "DESCRIPTION": "DESCRIPTION"
+                },
+                "ACCORDION": {
+                    "ETHICS-QUALITY": {
+                        "TITLE": "ÉTHIQUE ET QUALITÉ",
+                        "ENTRY-1": "Les diamants et l’or 750 ‰ proviennent de sources labellisées Responsible Jewelry Council (RJC)",
+                        "ENTRY-2": "Notre pendentif est fabriqué par une équipe d’experts, dans un atelier basé en France dédié aux métiers de la Haute Joaillerie et reconnu Entreprise du Patrimoine Vivant (EPV)"
+                    },
+                    "DELIVERY": {
+                        "TITLE": "LIVRAISON ET RETOUR",
+                        "ENTRY-1": "Tous nos bijoux sont garantis à vie",
+                        "ENTRY-2": "On livre votre pendentif gratuitement et en toute sécurité",
+                        "ENTRY-3": "Le pendentif ne répond pas à vos attentes ? Nous vous le remboursons ou vous l’échangeons gratuitement dans un délai de 30 jours après livraison."
+                    },
+                    "CODE": {
+                        "TITLE": "CODE DE LA COLLECTION BEEZZZ",
+                        "ENTRY-1": "Si nous avons choisi l'abeille comme mascotte de bee PARIS, c’est parce qu'elle confectionne chacun de nos bijoux avec minutie, à la manière des petites mains d’un atelier de haute couture. C’était donc évident pour nous qu’elle soit la vedette de notre première collection beezzz.",
+                        "ENTRY-2": "L’abeille crée un motif hexagonal parfait qui inspire la mode et que nous avons repris comme code de bee PARIS et du made in France. Mais ce n’est pas une abeille comme les autres ! Nous lui avons donné une allure ronde et amusante pour montrer que l’on peut créer une joaillerie d’exception en restant jeune et éthique."
+                    }
+                }
+            },
+            "PERSONAL-INFORMATIONS": {
+
+            },
+            "PAYMENT-MODES": {
+
+            },
+            "JEWELERY": {
+
+            },
+            "BEING-REASON": {
+                "JEWELERY": {
+                    "TITLE": "POUR UNE JOAILLERIE D'EXCEPTION JEUNE ET ÉTHIQUE"
+                },
+                "VALUES": {
+                    "TITLE": "NOS VALEURS"
+                },
+                "TRANSPARENCY": {
+                    "HEADER": "TRANSPARENCE",
+                    "RESPECT": {
+                        "TITLE": "Une marque qui respecte l'Homme et l'environnement"
+                    },
+                    "WARRANTY": {
+                        "TITLE": "Des garanties pour votre satisfaction et votre sérénité"
+                    }
+                },
+                "ECCENTRICITY": {
+                    "HEADER": "EXCENTRICITÉ",
+                    "PASSION": {
+                        "TITLE": "La passion des gemmes depuis toujours"
+                    },
+                    "FASHION": {
+                        "TITLE": "Un grain d'excentricité issu de la mode"
+                    }
+                },
+                "EXPERTISE": {
+                    "HEADER": "EXPERTISE",
+                    "QUALITY": {
+                        "TITLE": "Chaque diamant est de qualité certifiée"
+                    },
+                    "MANUFACTURE": {
+                        "TITLE": "Des bijoux fabriqués en France par des experts de la joaillerie"
+                    }
+                },
+                "ACTIONS": {
+                    "COLLECTION": "JE VEUX VOIR LA COLLECTION"
+                }
+            },
+            "BASKET": {
+                "TITLE": "PANIER",
+                "BASKET-SUMMARY": {
+                    "TITLE": "RÉSUMÉ DU PANIER",
+                    "SUB-TOTAL": "SOUS-TOTAL",
+                    "DELIVERY": "LIVRAISON",
+                    "TOTAL": "TOTAL",
+                    "LATEST": "Au plus tard le",
+                    "FREE": "Offerte"
+                },
+                "EMPTY": {
+                    "TITLE": "AUCUN ARTICLE DANS LE PANIER",
+                    "ACTIONS": {
+                        "COLLECTION": "JE VEUX VOIR LA COLLECTION"
+                    }
+                },
+                "DIALOG": {
+                    "REMOVE-CONFIRM": "Êtes-vous sûr de vouloir supprimer cet article de votre panier ?"
+                },
+                "ACTIONS": {
+                    "ORDER": "PASSER COMMANDE",
+                    "NOT-YET": "PAS TOUT DE SUITE"
+                }
+            },
+            "SERVICE": {
+                "WARRANTY": {
+                    "TITLE": "GARANTIE ET SAV",
+                    "LIFE-WARRANTY": {
+                        "TITLE": "Une garantie pour la vie",
+                        "ACTIONS": {
+                            "SALES-TERMS": "Retrouvez toutes nos garanties en détail dans nos CGV."
+                        }
+                    },
+                    "AFTER-SALES": {
+                        "TITLE": "SAV bee PARIS"
+                    }
+                },
+                "DELIVERY": {
+                    "TITLE": "LIVRAISON GARANTIE GRATUITE",
+                    "ORDER": {
+                        "TITLE": "Commandez, on s'occupe de tout !",
+                        "FREE-DELIVERY": {
+                            "TITLE": "1. Livraison Garantie gratuite"
+                        },
+                        "CLICK&COLLECT": {
+                            "TITLE": "2. Click & Collect"
+                        },
+                        "WITHDRAWAL": {
+                            "TITLE": "3. Retrait en Boutique"
+                        }
+                    }
+                },
+                "FREE-RETURN": {
+                    "TITLE": "RETOUR GRATUIT",
+                    "FREE-RETURN": {
+                        "TITLE": "1. Retour Gratuit"
+                    },
+                    "CONDITIONS": {
+                        "TITLE": "2. Conditions de retour"
+                    },
+                    "HOW": {
+                        "TITLE": "3. Comment ça marche ?",
+                        "SHIPPING-COSTS": {
+                            "TITLE": "Frais de port gratuits"
+                        },
+                        "INSURANCE": {
+                            "TITLE": "Assurance"
+                        }
+                    }
+                }
+            },
+            "LEGAL": {
+                "SALES-TERMS": {
+                    "TITLE": "CONDITIONS GÉNÉRALES DE VENTE"
+                },
+                "NOTICE": {
+                    "TITLE": "MENTIONS LÉGALES"
+                },
+                "PERSONAL-DATA": {
+                    "TITLE": "DONNÉE PERSONNELLES"
+                }
+            }
+        },
+        "HOUSE": {
+            "ETHICS": {
+                "TITLE" : "ÉTHIQUE",
+                "GEMS": {
+                    "TITLE": "NOS GEMMES ÉTHIQUES"
+                },
+                "GOLD-PLATINE": {
+                    "TITLE": "NOTRE OR ET PLATINE ÉTHIQUES"
+                },
+                "WORKSHOPS": {
+                    "TITLE": "LES ATELIERS RESPONSABLES"
+                },
+                "ACTIONS": {
+                    "GOLD-PLATINE": "NOTRE OR ET PLATINE",
+                    "GEMS": "NOS GEMMES",
+                    "EXPERTISE": "NOTRE EXPERTISE"
+                }
+            },
+            "EXPERTISE": {
+                "TITLE" : "NOTRE EXPERTISE",
+                "SAVOIR-FAIRE": {
+                    "TITLE": "NOTRE SAVOIR-FAIRE"
+                },
+                "GEMMOLOGY": {
+                    "TITLE": "LA GEMMOLOGIE"
+                },
+                "STUDIO": {
+                    "TITLE": "NOTRE STUDIO DE CRÉATION"
+                },
+                "ACTIONS": {
+                    "RDV": "PRENDRE RENDEZ-VOUS"
+                }
+            },
+            "CONTACT": {
+                "TITLE" : "NOUS CONTACTER",
+                "VISIOCHAT": {
+                    "TITLE": "VISIOCHAT"
+                },
+                "WHATSAPP": {
+                    "TITLE": "WHATSAPP"
+                },
+                "PHONE": {
+                    "TITLE": "TELEPHONE"
+                },
+                "MAIL": {
+                    "TITLE": "EMAIL"
+                },
+                "FORM": {
+                    "NAME": "NOM *",
+                    "LASTNAME": "PRENOM *",
+                    "EMAIL": "EMAIL *",
+                    "PHONE": "TELEPHONE *",
+                    "TALK-ABOUT": "PARLEZ-NOUS DE VOUS",
+                    "MESSAGES": {
+                        "REQUIRED": "Remplissez les champs obligatoires!"
+                    }
+                },
+                "ACTIONS": {
+                    "RDV":"PRENDRE RDV",
+                    "SEND": "ENVOYER"
+                }
+            },
+            "PURPOSE": {
+                "TITLE" : "NOTRE RAISON D'ETRE",
+                "JEWELERY": {
+                    "TITLE": "JOAILLERIE BELLE & ETHIQUE"
+                },
+                "VALEURS": {
+                    "TITLE": "NOS VALEURS",
+                    "TITLE1": "1. TRANSPARENCE",
+                    "TITLE2": "2. ENGAGEMENT",
+                    "TITLE3": "3. CREATIVITE"
+                },
+                "ACTIONS": {
+                    "COLLECTIONS":"NOS COLLECTIONS"
+                }
+            }
+        },
+        "SERVICE": {
+            "ADJUST-SIZE": {
+                "TITLE" : "MISE A TAILLE GRATUITE",
+                "ACCORDION": {
+                    "HOW-TO":  "COMMENT MESURER SON TOUR DE DOIGT ?",
+                    "EXCHANGE": "ECHANGER VOTRE BIJOU"
+                },
+                "ITSELF": {
+                    "TITLE": "SOI MEME",
+                    "SUBTITLE": "Baguier plastique"
+                },
+                "JEWELLER": {
+                    "TITLE": "BIJOUTERIE",
+                    "SUBTITLE": "Tripolet"
+                },
+                "ACTIONS": {
+                    "RING-SIZER":"MON BAGUIER GRATUIT",
+                    "ALL-RINGS": "TOUTES NOS BAGUES"
+                }
+            }
+        },
+        "STORE": {
+            "TITLE" : "BOUTIQUE",
+            "TRY": {
+                "TITLE": "ESSAYER VOTRE BIJOU"
+            },
+            "GET": {
+                "TITLE": "RETIREZ VOTRE COMMANDE"
+            },
+            "TIME": {
+                "TITLE": "HORAIRES",
+                "MONDAY-THURSDAY": {
+                    "entry1": "DU LUNDI AU JEUDI",
+                    "entry2": "10H00 - 20H00"
+                }, 
+                "FRIDAY": {
+                    "entry1": "VENDREDI",
+                    "entry2": "10H00 - 14H00"
+                },
+                "WEEKEND": {
+                    "entry1": "SAMEDI & DIMANCHE",
+                    "entry2": "FERME"
+                }
+            },
+            "ACTIONS": {
+                "RDV":"PRENDRE RDV"
+            }
+        },
+        "BACK-OFFICE": {
+            "TITLE": "BACK OFFICE",
+            "ORDERS": {
+                "TITLE": "COMMANDES",
+                "SEARCH": {
+                    "GLOBAL": "Recherche globale",
+                    "LIST": "Liste des Commandes",
+                    "NAME": "Recherche par Nom",
+                    "NUM": "Recherche par numéro",
+                    "NBART": "Recherche par Nb articles",
+                    "MODE": "Recherche par Mode de piement",
+                    "DATE": "Recherche par Date",
+                    "STATUS": "Recherche par statut"
+                },
+                "COL": {
+                    "NUMCOMMANDE": "Numéro de commande",
+                    "NAME": "Nom",
+                    "NBART": "Nb d'Articles",
+                    "MONTANTHT": "Montant HT",
+                    "MONTANTTTC": "Montant TTC",
+                    "TVA": "TVA",
+                    "LIVRAISON": "Livraison",
+                    "DATE": "Date",
+                    "STATUS": "Statut",
+                    "ADRESS": "ADRESSE",
+                    "MODEPAIEMENT": "Mode de Paiement"
+                }
+            },
+            "ORDER": {
+                "TITLE": "COMMANDES"
+            }
+        }
+    },
+    "SHELL": {
+        "HEADER": {
+            "ACTIONS": {
+                "BASKET": "Panier",
+                "PHONE": "Téléphone",
+                "MENU": "Menu"
+            },
+            "LANDING-PAGE": {
+                "MENU": {
+                    "BEING-REASON": "NOTRE RAISON D'ÊTRE",
+                    "JEWELERY": "JOAILLERIE"
+                }
+            }
+        },
+        "FOOTER": {
+            "ACTIONS": {
+                "BACK-TO-TOP": "Back to top"
+            },
+            "ACCORDION": {
+                "HELP": {
+                    "TITLE": "BESOIN D'AIDE ?",
+                    "CONTENT": "Contactez-nous par WhatsApp au 06 14 83 63 10, par mail à contact@bee-paris.com, au 01 47 43 13 58"
+                },
+                "SERVICE": {
+                    "TITLE": "LE SERVICE BEE PARIS",
+                    "FREE-RETURN": "Retour Gratuit",
+                    "DELIVERY": "Livraison Garantie Gratuite",
+                    "WARRANTY": "Garantie et SAV"
+                },
+                "LEGAL": {
+                    "TITLE": "JURIDIQUE",
+                    "SALES-TERMS": "Conditions Générales de Vente",
+                    "PERSONAL-DATA": "Données Personnelles",
+                    "NOTICE": "Mentions Légales"
+                }
+            },
+            "SOCIAL-NETWORKS": {
+                "INSTAGRAM": {
+                    "ACCOUNT": "beeparis_officiel"
+                }
+            },
+            "COPYRIGHT": "BEE PARIS 2020 - Tous droits réservés - TVA FR46848550547"
+        }
+    },
+    "HOMEPAGE": "Page d'accueil",
+    "COMMON": {
+        "ACTIONS": {
+            "CANCEL": "Annuler",
+            "CLOSE": "Fermer",
+            "CONFIRM": "Confirmer"
+        }
+    },
+    "UTILS": {
+        "DATE": "dd/MM/yyyy"
+    }
+}

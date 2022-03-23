@@ -1,0 +1,89 @@
+<div class="cs-header-clearfix"></div>
+<div class="cs-static-wrapper">
+    <div class="cs-static-title">
+        {{ pretrad + 'TITLE' | translate }}
+    </div>
+    <div class="cs-static-chapo">
+        <p>
+            La société BEE PARIS (ci-après dénommée la « Société ») crée, 
+            conçoit et commercialise en France des articles de joaillerie féminins 
+            et masculins revêtus de la marque de la
+        </p>
+    </div>
+    <div class="cs-static-section">
+        <div class="cs-static-title">
+            {{ pretrad + 'VISIOCHAT.TITLE' | translate }}
+        </div>
+        <div class="cs-static-content">
+            <p>
+                Contactez notre Gemmologue sur rendez-vous par VisioChat et découvrez nos bijoux en toute sécurité comme si vous étiez en boutique !
+            </p>
+        </div>
+        <div class="cs-full-width">
+            <button pButton pRipple type="button"  (click)="goToVisiochat()" [label]="pretrad + 'ACTIONS.RDV' | translate"></button>
+        </div>
+    </div>
+    <div class="cs-static-section">
+        <div class="cs-static-title">
+            {{ pretrad + 'WHATSAPP.TITLE' | translate }}
+        </div>
+        <div class="cs-static-content">
+            <p>
+                Demandez-nous des informations sur nos bijoux et notre service BEE PARIS par messages au
+<a href="tel:0614836310">06 14 83 63 10</a>
+            </p>
+        </div>
+    </div>
+    <div class="cs-static-section">
+        <div class="cs-static-title">
+            {{ pretrad + 'PHONE.TITLE' | translate }}
+        </div>
+        <div class="cs-static-content">
+            <p>
+                Contactez notre Service Client du lundi au jeudi de 10:00 à 19:00 et le 
+                vendredi de 10:00 à 13:00 au <a href="tel:0147431358">01 47 43 13 58</a> et bénéficiez de conseils personnalisés par nos ambassadeurs.
+            </p>
+        </div>
+    </div>
+    <div class="cs-static-section">
+        <div class="cs-static-title">
+            {{ pretrad + 'MAIL.TITLE' | translate }}
+        </div>
+        <div class="cs-static-content">
+            <p>
+                Ecrivez-nous à l’adresse
+                <a href="mailto:welcome@bee-paris.com">welcome@bee-paris.com</a>
+                ou en remplissez le formulaire ci-dessous :
+            </p>
+        </div>
+        <div class="cs-static-content">
+            <div class="cs-full-width">
+                <div class="p-fluid p-formgrid p-grid">
+                    <div class="p-field p-col-12 p-md-12 p-lg-12">
+                        <p-selectButton [options]="genreOptions" [(ngModel)]="genre" optionLabel="name"></p-selectButton>
+                    </div>
+                    <div class="p-field p-col-12 p-md-12 p-lg-6">
+                        <input id="firstname6" [placeholder]="pretrad + 'FORM.NAME' | translate" type="text" pInputText> 
+                    </div>
+                    <div class="p-field p-col-12 p-md-12 p-lg-6">
+                        <input id="lastname6" [placeholder]="pretrad + 'FORM.LASTNAME' | translate" type="text" pInputText> 
+                    </div>
+                    <div class="p-field p-col-12 p-md-12 p-lg-6">
+                        <input id="email" [placeholder]="pretrad + 'FORM.EMAIL' | translate" type="text" rows="4" pInputText>
+                    </div>
+                    <div class="p-field p-col-12 p-md-12 p-lg-6">
+                        <input id="phone" [placeholder]="pretrad + 'FORM.PHONE' | translate" type="text" pInputText> 
+                    </div>
+                    <div class="p-field p-col-12">
+                        <textarea id="text" [placeholder]="pretrad + 'FORM.TALK-ABOUT' | translate" type="text" rows="4" pInputTextarea></textarea>
+                    </div>
+                    * CHAMPS OBLIGATOIRES
+                </div>      
+            </div>
+            <div class="cs-full-width">
+                <button pButton pRipple type="button"  (click)="sendForm()" [label]="pretrad + 'ACTIONS.SEND' | translate"></button>
+            </div>
+        </div>
+    </div>
+   
+</div>

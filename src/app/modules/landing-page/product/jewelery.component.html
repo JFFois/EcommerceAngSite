@@ -1,0 +1,21 @@
+<div class="cs-header-clearfix"></div>
+<div class="cs-jewelery-wrapper cs-full-width">
+    <div class="cs-card cs-custom-link" *ngIf="p1.id !== null" [routerLink]="['/landing-page/product/P1']">
+        <p-card>
+            <div class="cs-product-image-wrapper">
+                <img class="cs-product-image" [src]="urlRest + p1.metalList[0].picture.image.url" />
+            </div>
+            <div class="cs-title">{{ p1.label }}</div>
+            <div class="cs-price">{{ p1.metalList[0].label }} - {{ p1.price + p1.metalList[0].price }} €</div>
+        </p-card>
+    </div>
+    <div class="cs-card cs-custom-link" *ngIf="p2.id !== null" [routerLink]="['/landing-page/product/P2']">
+        <p-card>
+            <div class="cs-product-image-wrapper">
+                <img class="cs-product-image" [src]="urlRest + p2.metalList[0].picture.image.url" />
+            </div>
+            <div class="cs-title">{{ p2.label }}</div>
+            <div class="cs-price">{{ p2.metalList[0].label }} - {{ p2.price + p2.metalList[0].price }} €</div>
+        </p-card>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="cs-footer-wrapper" id="footer">
+    <div class="cs-full-width">
+        <div class="cs-min-text cs-custom-link" (click)="backToTop()">
+            {{ pretrad + 'ACTIONS.BACK-TO-TOP' | translate }}
+        </div>
+    </div>
+    <div>
+        <p-accordion [multiple]="true">
+            <p-accordionTab [header]="pretrad + 'ACCORDION.HELP.TITLE' | translate">
+                {{ pretrad + 'ACCORDION.HELP.CONTENT' | translate }}
+            </p-accordionTab>
+            <p-accordionTab [header]="pretrad + 'ACCORDION.SERVICE.TITLE' | translate">
+                <div class="cs-custom-link" (click)="backToTop()" [routerLink]="['/landing-page/services/free-return']">{{ pretrad + 'ACCORDION.SERVICE.FREE-RETURN' | translate }}</div>
+                <div class="cs-custom-link" (click)="backToTop()" [routerLink]="['/landing-page/services/delivery']">{{ pretrad + 'ACCORDION.SERVICE.DELIVERY' | translate }}</div>
+                <div class="cs-custom-link" (click)="backToTop()" [routerLink]="['/landing-page/services/warranty']">{{ pretrad + 'ACCORDION.SERVICE.WARRANTY' | translate }}</div>
+            </p-accordionTab>
+            <p-accordionTab [header]="pretrad + 'ACCORDION.LEGAL.TITLE' | translate">
+                <div class="cs-custom-link" (click)="backToTop()" [routerLink]="['/landing-page/sales-terms']">{{ pretrad + 'ACCORDION.LEGAL.SALES-TERMS' | translate }}</div>
+                <div class="cs-custom-link" (click)="backToTop()" [routerLink]="['/landing-page/personal-data']">{{ pretrad + 'ACCORDION.LEGAL.PERSONAL-DATA' | translate }}</div>
+                <div class="cs-custom-link" (click)="backToTop()" [routerLink]="['/landing-page/notice']">{{ pretrad + 'ACCORDION.LEGAL.NOTICE' | translate }}</div>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+    <div class="cs-social-networks">
+        <div class="cs-custom-link" (click)="instagram()">
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            <span>{{ pretrad + 'SOCIAL-NETWORKS.INSTAGRAM.ACCOUNT' | translate }}</span>
+        </div>
+    </div>
+    <div class="cs-full-width">
+        <img [src]="'assets/images/logo/E - BEE PARIS PETIT NOIR.svg'" />
+    </div>
+    <div class="cs-full-width cs-min-text">
+        {{ pretrad + 'COPYRIGHT' | translate }}
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<p-toast></p-toast>
+<div *ngIf="display">
+    <div class="p-grid cs-header-wrapper">
+        <div class="p-col-2 cs-logo-header">
+            Bee Paris
+        </div>
+        <div class="p-col-8">
+            <p-tabMenu [model]="items" [activeItem]="activeItem">
+                <ng-template pTemplate="item" let-item>
+                    <div class="cs-menu-item" (click)="onSelectItem(item)">
+                        {{item.label}}
+                    </div>
+                </ng-template>
+            </p-tabMenu>
+        </div>
+        <div class="p-col-2 cs-icons-menu">
+            <button routerLink="/user/login" pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text"></button>
+        </div>
+    </div>
+    <div class="cs-menu-expand">
+        <!--Menu expanded-->
+    </div>
+</div>
+<div *ngIf="!display" class="p-grid cs-lp-header-wrapper" id="lp-header" [style.background-color]="!isMainPage || isScrolled ? '#98E5B1' : 'transparent'">
+    <div class="p-col-4">
+        <div class="cs-custom-button-wrapper">
+            <div class="cs-custom-button" (click)="menu.toggle($event)" [style.color]="!isMainPage || isScrolled ? 'black': 'white'">
+                <i class="fa fa-bars"></i>
+                <div>{{ pretrad + 'ACTIONS.MENU' | translate }}</div>
+            </div>
+            <p-menu #menu [popup]="true" [model]="menuItems"></p-menu>
+        </div>
+    </div>
+    <div class="p-col-4">
+        <img *ngIf="!isMainPage || isScrolled" [routerLink]="['/landing-page/main']" class="cs-custom-link cs-header-logo" [src]="'assets/images/logo/E - BEE PARIS PETIT NOIR.svg'" />
+        <img *ngIf="isMainPage && !isScrolled" [routerLink]="['/landing-page/main']" class="cs-custom-link cs-header-logo" [src]="'assets/images/logo/D - BEE PARIS PETIT BLANC.svg'" />
+    </div>
+    <div class="p-col-4">
+        <div class="cs-custom-button-wrapper">
+            <div (click)="phone()" class="fa fa-mobile cs-custom-button" [style.color]="!isMainPage || isScrolled ? 'black': 'white'"></div>
+        </div>
+        <div class="cs-custom-button-wrapper">
+            <img (click)="basket()" class="cs-custom-button" [src]="'assets/icons/panier.svg'" *ngIf="!isMainPage || isScrolled" />
+            <img (click)="basket()" class="cs-custom-button" [src]="'assets/icons/panier-white.svg'" *ngIf="isMainPage && !isScrolled"/>
+        </div>
+    </div>
+</div>

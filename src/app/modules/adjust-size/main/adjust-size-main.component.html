@@ -1,0 +1,49 @@
+<div class="cs-header-clearfix"></div>
+<div class="cs-being-reason-wrapper cs-static-wrapper">
+    <div class="cs-static-title">
+        {{ pretrad + 'TITLE' | translate }}
+    </div>
+    <div class="cs-static-section">
+        <div class="cs-static-content">
+            <p>
+                La société BEE PARIS (ci-après dénommée la « Société ») crée, conçoit et commercialise en France des articles de joaillerie féminins et masculins revêtus de la marque de la Société. Afin de mieux répondre aux attentes de ses
+                clients, la Société a mis en place un système de vente en.
+            </p>
+            <div></div>
+        </div>
+        <p-accordion [multiple]="true">
+            <p-accordionTab [header]="pretrad + 'ACCORDION.HOW-TO' | translate">
+                <div class="cs-static-content">
+                    <p>
+                        La société BEE PARIS (ci-après dénommée la « Société ») crée, conçoit et commercialise en France des articles de au clic = affichage en plein Unipersonnelle au capital de 1000 Euros, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 848 540 547, dont le siège social est situé 14, boulevard Exelmans 75016 Paris - numéro de téléphone : +33(0)1 47 43 13 58 - Adresse e-mail : contact@bee-paris.com ; TVA FR 46 848 5 Unipersonnelle au capital de 1000 Euros, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 848 540 547, dont le siège social est situé 14, boulevard Exelmans 75016 Paris - numéro de téléphone :
+                        +33(0)1 47 43 13 58 - Adresse e-mail : contact@beeparis. com ; TVA FR 46 848 550 547.de la société BEE PARIS, Société par Actions Simplifiée Unipersonnelle au Registre du Commerce et des Sociétés de Paris sous le numéro 848 540 547, dont le siège social est situé 14, boulevard Exelmans 75016 Paris - numéro de téléphone :
+                    </p>
+                </div>
+                <div class="cs-img-holder">
+                    <img src="https://via.placeholder.com/600">
+                    <div class="cs-img-title">{{ pretrad + 'ITSELF.TITLE' | translate }}</div>
+                    <div class="cs-img-subtitle">{{ pretrad + 'ITSELF.SUBTITLE' | translate }}</div>
+                </div>
+
+                <div class="cs-img-holder">
+                    <img src="https://via.placeholder.com/600">
+                    <div class="cs-img-title">{{ pretrad + 'JEWELLER.TITLE' | translate }}</div>
+                    <div class="cs-img-subtitle">{{ pretrad + 'JEWELLER.SUBTITLE' | translate }}</div>
+                </div>
+                <div class="cs-full-width">
+                    <button pButton pRipple type="button" class="p-button-sec" (click)="goToBaguier()" [label]="pretrad + 'ACTIONS.RING-SIZER' | translate"></button>
+                </div>
+            </p-accordionTab>
+            <p-accordionTab [header]="pretrad + 'ACCORDION.EXCHANGE' | translate">
+                <div class="cs-static-content">
+                    <p>
+                        de la société BEE PARIS, Société par Actions Simplifiée Unipersonnelle au capital de 1000 Euros, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 848 540 547, dont le siège social est situé 14, boulevard Exelmans 75016 Paris - numéro de téléphone : +33(0)1 47 43 13 58 - Adresse e-mail : contact@beeparis. com ; TVA FR 46 848 550 547.de la société BEE PARIS, Société par Actions Simplifiée Unipersonnelle au
+                    </p>
+                </div>
+                <div class="cs-full-width">
+                    <button pButton pRipple type="button" (click)="goToCollection()" [label]="pretrad + 'ACTIONS.ALL-RINGS' | translate"></button>
+                </div>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+</div>

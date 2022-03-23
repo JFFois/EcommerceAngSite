@@ -1,0 +1,83 @@
+<div class="cs-header-clearfix"></div>
+<div class="cs-basket-wrapper">
+    <div class="cs-full-width">
+        {{ pretrad + 'TITLE' | translate }}
+    </div>
+    <div class="cs-empty" *ngIf='products.length == 0'>
+        <div class="cs-full-width">{{ pretrad + 'EMPTY.TITLE' | translate }}</div>
+        <div class="cs-full-width">
+            <button pButton pRipple type="button" (click)="goToCollection()" [label]="pretrad + 'EMPTY.ACTIONS.COLLECTION' | translate"></button>
+        </div>
+    </div>
+    <ng-template ngFor let-product [ngForOf]="products" let-i="index">
+        <div class="cs-full-width cs-card">
+            <p-card>
+                <div class="cs-icons">
+                    <div class="cs-delivery">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                    </div>
+                    <div class="cs-remove">
+                        <button pButton pRipple type="button" (click)="openConfirmDialog()" icon="pi pi-times" class="p-button-sm p-button-rounded"></button>
+                    </div>
+                </div>
+                <div class="cs-product-image-wrapper">
+                    <img class="cs-product-image" [src]="urlRest + product.metal.picture.image.url" />
+                </div>
+                <div class="cs-title">{{ product.label }}</div>
+                <div class="cs-price">{{ product.metal.label }} - {{ product.price + product.metal.price }} €</div>
+            </p-card>
+        </div>
+    </ng-template>
+    <div>
+        <div class="cs-full-width">
+            <div class="cs-separator"></div>
+        </div>
+        <div class="cs-left">{{ pretrad + 'BASKET-SUMMARY.TITLE' | translate }}</div>
+        <div class="cs-full-width">
+            <div class="cs-float-container">
+                <div>{{ pretrad + 'BASKET-SUMMARY.SUB-TOTAL' | translate }}</div>
+                <div>{{ subTotal }} €</div>
+            </div>
+        </div>
+        <div *ngIf="products.length > 0">
+            <div class="cs-full-width">
+                <div class="cs-separator"></div>
+            </div>
+            <div class="cs-full-width">
+                <div class="cs-float-container">
+                    <div>{{ pretrad + 'BASKET-SUMMARY.DELIVERY' | translate }}</div>
+                    <div>{{ pretrad + 'BASKET-SUMMARY.FREE' | translate }}</div>
+                </div>
+            </div>
+            <div class="cs-left cs-latest">{{ pretrad + 'BASKET-SUMMARY.LATEST' | translate }}</div>
+            <div class="cs-left cs-date">{{deliveryDate | date : ('UTILS.DATE' | translate)}}</div>
+        </div>
+        <div class="cs-full-width">
+            <div class="cs-separator"></div>
+        </div>
+        <div class="cs-full-width">
+            <div class="cs-float-container">
+                <div>{{ pretrad + 'BASKET-SUMMARY.TOTAL' | translate }}</div>
+                <div>{{ total }} €</div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="products.length > 0">
+        <div class="cs-full-width" [style.margin-top]="'20px'">
+            <button pButton pRipple type="button" (click)="order()" [label]="pretrad + 'ACTIONS.ORDER' | translate"></button>
+        </div>
+        <div class="cs-full-width cs-not-yet">
+            <button pButton pRipple type="button" (click)="goToCollection()" [label]="pretrad + 'ACTIONS.NOT-YET' | translate"></button>
+        </div>
+    </div>
+</div>
+
+<p-dialog [(visible)]="displayDialog" [style]="{width: '80vw'}">
+    {{ pretrad + 'DIALOG.REMOVE-CONFIRM' | translate}}
+    <p-footer>
+        <div class="cs-inline-blocks">
+            <p-button icon="pi pi-check" (click)="removeProduct()" [label]="'COMMON.ACTIONS.CONFIRM' | translate" styleClass="p-button-text"></p-button>
+            <p-button icon="pi pi-times" (click)="displayDialog=false" [label]="'COMMON.ACTIONS.CANCEL' | translate"></p-button>
+        </div>
+    </p-footer>
+</p-dialog>

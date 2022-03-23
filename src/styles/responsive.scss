@@ -1,0 +1,174 @@
+@import 'variables.scss';
+
+@media screen and (max-width: 800px) {
+    .cs-custom-button-wrapper {
+        margin: 0 10px;
+        .cs-custom-button {
+            cursor: pointer;
+            >i {
+                font-size: 30px;
+            }
+            >div {
+                margin-top: 5px;
+                margin-left: 5px;
+                font-size: 20px;
+            }
+        }
+        img {
+            width: 35px;
+        }
+        >div {
+            font-size: 35px;
+            color: white;
+        }
+    }
+    .cs-header-logo {
+        width: 120px;
+    }
+
+    .cs-header-clearfix {
+        height: 106px;
+    }
+
+    .cs-static-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .cs-jewelery-wrapper {
+        display: block;
+        margin-top: 0;
+        .cs-card {
+            &:first-child {
+                border-right: none;
+                border-bottom: 1px solid lightgray;
+            }
+            p-card {
+                .p-card {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .cs-basket-wrapper{
+        .cs-product-image-wrapper {
+            display: flex;
+            justify-content: center;
+            .cs-product-image {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .cs-landing-page-main-wrapper, .cs-product-wrapper{
+        .p-carousel {
+            .cs-carousel-image-wrapper {
+                width: calc(100vw - 6rem);
+            }
+        }
+    }
+
+    .cs-static-wrapper > {
+        .cs-service-header {
+            background-image: url('assets/images/landing-page/backgrounds/N - Plaque.png');
+            background-color: lightgray;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 -5.6%;
+            padding: 50px 0;
+            margin-bottom: -1px;
+            font-size: 35px;
+            color: white;
+        }
+    }
+
+    .cs-product-wrapper {
+        .p-tabview-nav {
+            li {
+                font-size: 17px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) {
+    .cs-static-wrapper {
+        text-align: center;
+    }
+    .cs-static-section {
+        .p-button {
+            width: 80%;
+            padding: 13px;
+        }
+    }
+
+    .p-inputtextarea,
+    .p-inputtext {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .cs-back-office-orders-wrapper {
+        .p-column-title {
+            padding: .4rem;
+            min-width: 30%;
+            display: inline-block;
+            margin: -.4rem 1rem -.4rem -.4rem;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .cs-custom-button-wrapper {
+        margin: 0 10px;
+        .cs-custom-button {
+            cursor: pointer;
+            >i {
+                font-size: 30px;
+            }
+            >div {
+                margin-top: 5px;
+                margin-left: 5px;
+                font-size: 20px;
+            }
+        }
+        img {
+            width: 40px;
+        }
+        >div {
+            font-size: 40px;
+            color: white;
+        }
+    }
+
+    .cs-static-wrapper  {
+        max-width: 600px;
+        margin: auto;
+
+        >.cs-service-header {
+            background-image: url('assets/images/landing-page/backgrounds/N - Plaque.png');
+            background-color: lightgray;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 -5.6%;
+            padding: 50px 0;
+            margin-bottom: -1px;
+            font-size: 35px;
+            color: white;
+            text-align: center;
+        }
+        
+    }
+
+    .cs-back-office-orders-wrapper {
+        .p-column-title { 
+            display: none;
+        }
+    }
+    
+}

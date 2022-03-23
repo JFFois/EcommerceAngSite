@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["es6", "dom"],
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "@modules/*": ["app/modules/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  },
+  "exclude": [
+    "node_modules",
+    "src/main.aot.ts"
+  ]
+}

@@ -1,0 +1,80 @@
+<div class="cs-product-wrapper">
+    <p-carousel [value]="product.metalList" [circular]="true" [(page)]="page" (onPage)="onPageChange($event)">
+        <ng-template let-metal pTemplate="item">
+            <div class="cs-carousel-image-wrapper">
+                <img [src]="urlRest + metal.picture.image.url" />
+            </div>
+        </ng-template>    
+    </p-carousel>
+    <div class="cs-title cs-full-width">{{product.label}}</div>
+    <div class="cs-price cs-full-width">{{calculatedPrice}} €</div>
+    <div class="cs-full-width">
+        <div class="cs-separator"></div>
+    </div>
+    <div class="cs-full-width cs-product-button-picker-wrapper">
+        <ng-template ngFor let-metal [ngForOf]="product.metalList" let-i="index">
+            <button pButton pRipple type="button" (click)="onPickMetal(i)" [label]="metal.label" class="cs-product-button-picker" id="{{i}}"></button>
+        </ng-template>
+    </div>
+    <div class="cs-full-width cs-engraving-picker">
+        <p-checkbox name="engraving" [binary]="true" [(ngModel)]="finalProduct.isEngraved"></p-checkbox>
+        <label for="engraving" [innerHTML]="pretrad + 'ACTIONS.ENGRAVING' | translate"></label>
+    </div>
+    <div *ngIf="finalProduct.isEngraved" class="cs-engraving-wrapper">
+        <div class="cs-full-width">
+            <div class="cs-separator"></div>
+        </div>
+        <div class="cs-font-style-wrapper cs-full-width">
+            <p-selectButton [options]="fontStyles" [(ngModel)]="finalProduct.engravingFont"></p-selectButton>
+        </div>
+        <div class="cs-full-width">
+            <textarea maxlength="15" [rows]="5" [cols]="15" pInputTextarea [(ngModel)]="finalProduct.engravingText" autoResize="autoResize"></textarea>
+        </div>
+        <div class="cs-full-width">
+            <div class="cs-align-right cs-counter">
+                {{finalProduct.engravingText.length}} / 15 MAX
+            </div>
+        </div>
+    </div>
+    <div class="cs-full-width">
+        <div class="cs-separator"></div>
+    </div>
+    <div class="cs-full-width">
+        <div class="cs-availability">
+            <div>{{ pretrad + 'AVAILABILITY.AVAILABLE-UNDER' | translate }}</div>
+            <div class="cs-timing" *ngIf="product.metalList.length > 0">{{ product.metalList[page].availability }} {{ pretrad + 'AVAILABILITY.DAYS' | translate }}</div>
+        </div>
+    </div>
+    <div class="cs-full-width">
+        <button pButton pRipple type="button" (click)="onAddToBasket()" [label]="pretrad + 'ACTIONS.ADD-TO-BASKET' | translate" class="cs-add-to-basket"></button>
+    </div>
+    <p-tabView *ngIf="tabviewVisible">
+        <p-tabPanel [header]="pretrad + 'TABVIEW.PRESENTATION' | translate">
+            <span [innerHTML]="product.presentation"></span>
+        </p-tabPanel>
+        <p-tabPanel [header]="pretrad + 'TABVIEW.DESCRIPTION' | translate">
+            <span [innerHTML]="product.description"></span>
+        </p-tabPanel>
+    </p-tabView>
+    <div>
+        <p-accordion [multiple]="true">
+            <p-accordionTab [header]="pretrad + 'ACCORDION.ETHICS-QUALITY.TITLE' | translate">
+                <ul>
+                    <li>{{ pretrad + 'ACCORDION.ETHICS-QUALITY.ENTRY-1' | translate }}</li>
+                    <li>{{ pretrad + 'ACCORDION.ETHICS-QUALITY.ENTRY-2' | translate }}</li>
+                </ul>
+            </p-accordionTab>
+            <p-accordionTab [header]="pretrad + 'ACCORDION.DELIVERY.TITLE' | translate">
+                <ul>
+                    <li>{{ pretrad + 'ACCORDION.DELIVERY.ENTRY-1' | translate }}</li>
+                    <li>{{ pretrad + 'ACCORDION.DELIVERY.ENTRY-2' | translate }}</li>
+                    <li>{{ pretrad + 'ACCORDION.DELIVERY.ENTRY-3' | translate }}</li>
+                </ul>
+            </p-accordionTab>
+            <p-accordionTab [header]="pretrad + 'ACCORDION.CODE.TITLE' | translate">
+                {{ pretrad + 'ACCORDION.CODE.ENTRY-1' | translate }}<br><br>
+                {{ pretrad + 'ACCORDION.CODE.ENTRY-2' | translate }}
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+</div>

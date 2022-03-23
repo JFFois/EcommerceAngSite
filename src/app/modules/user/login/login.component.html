@@ -1,0 +1,15 @@
+<p-card class="cs-login-card">
+    <span class="p-float-label">
+        <input id="mail" type="email" pInputText [(ngModel)]="mail">
+        <label for="mail">{{ pretrad + 'FORM.MAIL.LABEL' | translate }}</label>
+    </span>
+    <span class="p-float-label">
+        <input id="password" type="password" pInputText [(ngModel)]="password">
+        <label for="password">{{ pretrad + 'FORM.PASSWORD.LABEL' | translate }}</label>
+    </span>
+    <a routerLink="#" class="cs-link cs-align-right">{{ pretrad + 'FORM.ACTIONS.FORGOTTEN-PASSWORD' | translate }}</a>
+    <button pButton pRipple type="button" class="cs-full-width" [label]="pretrad + 'FORM.ACTIONS.SIGN-IN' | translate"></button>
+</p-card>
+<div class="cs-full-width">
+    <button pButton pRipple type="button" (click)="register()" [label]="pretrad + 'ACTIONS.REGISTER' | translate"></button>
+</div>
